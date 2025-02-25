@@ -9,12 +9,17 @@ import TodoData from "./components/todo/TodoData";
 
 
 const App = () => {
-  
+  const data = {
+    address: "HaNoi2",
+    country: "Vietnam"
+  }
   return (
     <div className="todo-container"> 
        <div className="todo-title"> Todo List </div>
        <TodoNew/>
-       <TodoData/>
+       <TodoData 
+       data = {data}
+       />
        <div className="todo-image"> <img src={reactLogo} className="logo"/></div>
        </div>
   )
