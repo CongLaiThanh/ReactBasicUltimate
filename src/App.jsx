@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./components/todo/todo.css";
-import TodoNew from "./components/TodoNew";
+import TodoNew from "./components/todo/TodoNew";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg"; // Kiểm tra lại đường dẫn
 import MyComponent from "./components/learn/MyComponent";
@@ -13,10 +13,16 @@ const App = () => {
     address: "HaNoi2",
     country: "Vietnam"
   }
+  const addNewTodo = (name) => {
+    alert(`call me ${name}`)
+  }
+  //addNewTodo();
   return (
     <div className="todo-container"> 
        <div className="todo-title"> Todo List </div>
-       <TodoNew/>
+       <TodoNew
+        addNewTodo = {addNewTodo}
+       />
        <TodoData 
        data = {data}
        />
