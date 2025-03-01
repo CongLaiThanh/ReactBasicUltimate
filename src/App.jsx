@@ -15,9 +15,17 @@ const App = () => {
   }
    const [todoList,setTodoList] = useState([
     {id:1,name: "thachs"},{id:2,name:"minhhn"}
-   ])
+   ])   
+   
   const addNewTodo = (name) => {
-    alert(`call me ${name}`) 
+    const newTodo = {
+      id:randomnumber(1,10000000),
+      name:name
+    }
+    setTodoList([...todoList, newTodo])
+  }
+  const randomnumber=(min,max) => {
+    return Math.floor(Math.random()*(max-min +1) + min);
   }
   //addNewTodo();
   return (
