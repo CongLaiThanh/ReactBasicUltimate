@@ -13,6 +13,9 @@ const App = () => {
     address: "HaNoi2",
     country: "Vietnam"
   }
+   const [todoList,setTodoList] = useState([
+    {id:1,name: "thachs"},{id:2,name:"minhhn"}
+   ])
   const addNewTodo = (name) => {
     alert(`call me ${name}`) 
   }
@@ -25,6 +28,7 @@ const App = () => {
        />
        <TodoData 
        data = {data}
+       todoList = {todoList}
        />
        <div className="todo-image"> <img src={reactLogo} className="logo"/></div>
        </div>
