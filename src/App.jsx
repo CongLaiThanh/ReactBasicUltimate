@@ -5,6 +5,8 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg"; // Kiểm tra lại đường dẫn
 import MyComponent from "./components/learn/MyComponent";
 import TodoData from "./components/todo/TodoData";
+import Header from "./components/layout/header";
+import Footer from "./components/layout/footer"
 
 
 
@@ -29,6 +31,8 @@ const App = () => {
   }
   //addNewTodo();
   return (
+    <>
+    <Header/>
     <div className="todo-container"> 
        <div className="todo-title"> Todo List </div>
        <TodoNew
@@ -40,6 +44,8 @@ const App = () => {
        />
        <div className="todo-image"> <img src={reactLogo} className="logo"/></div>
        </div>
+       <Footer/>
+       </>
   )
 }
 
