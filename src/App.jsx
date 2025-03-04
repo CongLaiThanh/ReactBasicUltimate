@@ -7,6 +7,7 @@ import MyComponent from "./components/learn/MyComponent";
 import TodoData from "./components/todo/TodoData";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer"
+import { Outlet } from "react-router-dom";
 
 
 
@@ -32,6 +33,7 @@ const App = () => {
   //addNewTodo();
   return (
     <>
+    
     <Header/>
     <div className="todo-container"> 
        <div className="todo-title"> Todo List </div>
@@ -44,6 +46,7 @@ const App = () => {
        />
        <div className="todo-image"> <img src={reactLogo} className="logo"/></div>
        </div>
+       <Outlet/>
        <Footer/>
        </>
   )
